@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard de Clima</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-cloud"></i> Dashboard de Clima</h1>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Buscar cidade..." />
+                <button onclick="buscarClima()" id="searchBtn"><i class="fas fa-search"></i></button>
+            </div>
+        </header>
+
+        <main>
+            <!-- Clima Atual -->
+            <section class="clima-atual">
+                <div class="info-principal" id="infoPrincipal">
+                    <h2 id="cityName">Carregando...</h2>
+                    <div class="temperatura-grande">
+                        <span id="temperatura">--</span>°C
+                    </div>
+                    <p id="descricao">--</p>
+                    <p id="sensacaoTermica">Sensação: -- °C</p>
+                </div>
+                <div class="detalhes" id="detalhes">
+                    <div class="detalhe">
+                        <i class="fas fa-droplet"></i>
+                        <div>
+                            <span>Umidade</span>
+                            <p id="umidade">--%</p>
+                        </div>
+                    </div>
+                    <div class="detalhe">
+                        <i class="fas fa-wind"></i>
+                        <div>
+                            <span>Vento</span>
+                            <p id="vento">-- km/h</p>
+                        </div>
+                    </div>
+                    <div class="detalhe">
+                        <i class="fas fa-gauge"></i>
+                        <div>
+                            <span>Pressão</span>
+                            <p id="pressao">-- hPa</p>
+                        </div>
+                    </div>
+                    <div class="detalhe">
+                        <i class="fas fa-eye"></i>
+                        <div>
+                            <span>Visibilidade</span>
+                            <p id="visibilidade">-- km</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Previsão 5 dias -->
+            <section class="previsao">
+                <h2>Previsão 5 Dias</h2>
+                <div class="grid-previsao" id="previsaoContainer">
+                    <!-- Carregado dinamicamente -->
+                </div>
+            </section>
+
+            <!-- Cidades Salvas -->
+            <section class="cidades-salvas">
+                <h2>Cidades Salvas</h2>
+                <div class="botoes-cidades" id="cidadesSalvas">
+                    <p style="color: #999;">Nenhuma cidade salva ainda</p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
