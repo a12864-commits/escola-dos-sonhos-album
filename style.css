@@ -1,0 +1,269 @@
+body{
+    font-family:Arial;
+    background:#071b39;
+    color:white;
+    margin:0;
+}
+
+header{
+    text-align:center;
+    padding:20px;
+    background:linear-gradient(135deg, #f6c000, #ffdd00);
+    color:#071b39;
+}
+
+header h1{
+    margin:0;
+    font-size:2.5em;
+}
+
+header h2{
+    margin:5px 0 0 0;
+    font-size:1.2em;
+    opacity:0.9;
+}
+
+.logo{
+    width:120px;
+    margin-bottom:10px;
+}
+
+nav{
+    display:flex;
+    justify-content:center;
+    gap:10px;
+    margin-bottom:20px;
+    flex-wrap:wrap;
+    padding:20px;
+}
+
+button{
+    background:#f6c000;
+    border:none;
+    padding:12px 20px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+button:hover{
+    background:#ffdd00;
+    transform:scale(1.05);
+}
+
+.page{
+    padding:20px;
+    max-width:1200px;
+    margin:0 auto;
+}
+
+.hidden{
+    display:none;
+}
+
+#cardsContainer{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    justify-content:center;
+}
+
+#novasCartas{
+    display:flex;
+    flex-wrap:wrap;
+    gap:15px;
+    justify-content:center;
+    margin-top:20px;
+    min-height:250px;
+    align-items:center;
+}
+
+.card{
+    width:140px;
+    background:white;
+    color:black;
+    border-radius:12px;
+    padding:10px;
+    text-align:center;
+    transition:0.3s;
+    cursor:pointer;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,0.3);
+}
+
+.card-imagem{
+    width:100%;
+    height:150px;
+    object-fit:cover;
+    border-radius:8px;
+    margin-bottom:8px;
+}
+
+.card h4{
+    margin:5px 0;
+    font-size:14px;
+}
+
+.card p{
+    margin:3px 0;
+    font-size:12px;
+}
+
+.card .raridade{
+    font-weight:bold;
+    margin-top:8px;
+    font-size:11px;
+}
+
+.raridade-lendária{
+    border:3px solid gold;
+    background:linear-gradient(135deg, #fff8dc, #fffacd);
+}
+
+.raridade-épica{
+    border:3px solid #b366ff;
+    background:linear-gradient(135deg, #f0e6ff, #e6d9ff);
+}
+
+.raridade-rara{
+    border:3px solid silver;
+    background:linear-gradient(135deg, #f5f5f5, #e8e8e8);
+}
+
+.progress{
+    width:100%;
+    height:30px;
+    background:#444;
+    border-radius:20px;
+    overflow:hidden;
+    margin:15px 0;
+}
+
+#progressBar{
+    width:0%;
+    height:30px;
+    background:linear-gradient(90deg, #00ff00, #00cc00);
+    border-radius:20px;
+    transition:width 0.5s ease;
+}
+
+h3{
+    color:#f6c000;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin-top:0;
+}
+
+/* Seção de Estatísticas */
+.stats-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(150px, 1fr));
+    gap:15px;
+    margin:20px 0;
+}
+
+.stat-card{
+    background:#1a3a52;
+    border:2px solid #f6c000;
+    border-radius:10px;
+    padding:20px;
+    text-align:center;
+    border-radius:10px;
+}
+
+.stat-card .numero{
+    font-size:2em;
+    color:#f6c000;
+    font-weight:bold;
+}
+
+.stat-card .label{
+    color:#999;
+    font-size:0.9em;
+    margin-top:5px;
+}
+
+/* Seção de Trocas */
+.trocas-container{
+    background:#1a3a52;
+    border:2px solid #f6c000;
+    border-radius:10px;
+    padding:20px;
+    margin:20px 0;
+}
+
+#cartsEmTroca{
+    background:#0a1f33;
+    border-radius:8px;
+    padding:15px;
+    margin:15px 0;
+    min-height:100px;
+}
+
+.card-mini{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:white;
+    color:black;
+    padding:8px 12px;
+    border-radius:8px;
+    margin:5px;
+    border:2px solid #f6c000;
+}
+
+.card-imagem-mini{
+    width:40px;
+    height:50px;
+    object-fit:cover;
+    border-radius:4px;
+}
+
+.btn-remover{
+    background:#ff6b6b;
+    color:white;
+    border:none;
+    padding:5px 10px;
+    border-radius:4px;
+    cursor:pointer;
+    margin-left:5px;
+}
+
+.btn-remover:hover{
+    background:#ff5252;
+}
+
+.btn-primario{
+    background:#f6c000;
+    color:#071b39;
+    padding:15px 30px;
+    font-size:1em;
+    margin-top:15px;
+}
+
+.btn-primario:hover{
+    background:#ffdd00;
+}
+
+/* Responsivo */
+@media (max-width:768px){
+    header h1{
+        font-size:1.8em;
+    }
+    
+    .stats-container{
+        grid-template-columns:repeat(2, 1fr);
+    }
+    
+    nav{
+        flex-direction:column;
+    }
+    
+    nav button{
+        width:100%;
+    }
+}

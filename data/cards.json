@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "nome": "Messi",
+    "pais": "Argentina",
+    "raridade": "Lendária"
+  },
+  {
+    "id": 2,
+    "nome": "Mbappé",
+    "pais": "França",
+    "raridade": "Épica"
+  },
+  {
+    "id": 3,
+    "nome": "Bellingham",
+    "pais": "Inglaterra",
+    "raridade": "Rara"
+  },
+  {
+    "id": 4,
+    "nome": "Vinícius Jr",
+    "pais": "Brasil",
+    "raridade": "Épica"
+  },
+  {
+    "id": 5,
+    "nome": "Haaland",
+    "pais": "Noruega",
+    "raridade": "Lendária"
+  },
+  {
+    "id": 6,
+    "nome": "Musiala",
+    "pais": "Alemanha",
+    "raridade": "Rara"
+  },
+  {
+    "id": 7,
+    "nome": "Neymar",
+    "pais": "Brasil",
+    "raridade": "Épica"
+  },
+  {
+    "id": 8,
+    "nome": "Rodrygo",
+    "pais": "Brasil",
+    "raridade": "Rara"
+  },
+  {
+    "id": 9,
+    "nome": "Lewandowski",
+    "pais": "Polônia",
+    "raridade": "Épica"
+  },
+  {
+    "id": 10,
+    "nome": "Ronaldo",
+    "pais": "Portugal",
+    "raridade": "Lendária"
+  },
+  {
+    "id": 11,
+    "nome": "Son",
+    "pais": "Coreia do Sul",
+    "raridade": "Rara"
+  },
+  {
+    "id": 12,
+    "nome": "Pedri",
+    "pais": "Espanha",
+    "raridade": "Rara"
+  }
+]

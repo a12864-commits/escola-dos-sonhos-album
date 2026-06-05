@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Escola dos Sonhos - Copa 2026</title>
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <img src="assets/logo.png" class="logo">
+    <h1>Escola dos Sonhos</h1>
+    <h2>Álbum Digital Copa 2026</h2>
+</header>
+
+<nav>
+    <button onclick="showPage('album')">🏆 Meu Álbum</button>
+    <button onclick="showPage('pacotes')">🎁 Pacotes</button>
+    <button onclick="showPage('colecao')">📇 Cartas</button>
+    <button onclick="showPage('trocas')">🔄 Trocas</button>
+</nav>
+
+<section id="album" class="page">
+    <h3>📊 Progresso do Álbum</h3>
+    <div class="progress">
+        <div id="progressBar"></div>
+    </div>
+    <p id="percent" style="text-align:center; font-size:1.2em; color:#f6c000;">0%</p>
+    
+    <h3 style="margin-top:30px;">📈 Estatísticas</h3>
+    <div class="stats-container">
+        <div class="stat-card">
+            <div class="numero" id="totalCartas">0</div>
+            <div class="label">Cartas Coletadas</div>
+        </div>
+        <div class="stat-card">
+            <div class="numero" id="cartasRestantes">12</div>
+            <div class="label">Faltam Coletar</div>
+        </div>
+        <div class="stat-card">
+            <div class="numero" id="lendarias">0</div>
+            <div class="label">⭐ Lendárias</div>
+        </div>
+        <div class="stat-card">
+            <div class="numero" id="epicas">0</div>
+            <div class="label">🔮 Épicas</div>
+        </div>
+        <div class="stat-card">
+            <div class="numero" id="raras">0</div>
+            <div class="label">💎 Raras</div>
+        </div>
+    </div>
+</section>
+
+<section id="pacotes" class="page hidden">
+    <h3>🎁 Recompensa Diária</h3>
+    <p style="text-align:center; font-size:1.1em; margin:20px 0;">Abra 5 cartas aleatórias do pacote!</p>
+    <div style="text-align:center;">
+        <button onclick="abrirPacote()" style="font-size:1.2em; padding:20px 40px;">
+            🎲 Abrir 5 Cartas
+        </button>
+    </div>
+
+    <div id="novasCartas"></div>
+</section>
+
+<section id="colecao" class="page hidden">
+    <h3>📇 Minha Coleção</h3>
+    <p style="color:#999; margin-bottom:20px;">Clique nas cartas para selecionar para troca</p>
+    <div id="cardsContainer"></div>
+</section>
+
+<section id="trocas" class="page hidden">
+    <h3>🔄 Sistema de Trocas</h3>
+    
+    <div class="trocas-container">
+        <p style="margin-top:0;">Selecione suas cartas (máximo 3) na seção de Cartas e negocie com amigos!</p>
+        
+        <div id="cartsEmTroca"></div>
+        
+        <button class="btn-primario" onclick="enviarTrocaAmigo()">
+            📤 Enviar Proposta de Troca
+        </button>
+        
+        <hr style="margin:30px 0; border-color:#333;">
+        
+        <h4>💡 Como Funciona:</h4>
+        <ol style="color:#999; line-height:1.8;">
+            <li>Vá para a seção <strong>Cartas</strong></li>
+            <li>Clique nas cartas que deseja oferecer (máximo 3)</li>
+            <li>Volta para <strong>Trocas</strong></li>
+            <li>Clique em <strong>Enviar Proposta de Troca</strong></li>
+            <li>Compartilhe o código com seu amigo!</li>
+        </ol>
+    </div>
+</section>
+
+<script src="app.js"></script>
+
+</body>
+</html>
