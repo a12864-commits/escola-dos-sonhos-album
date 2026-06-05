@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', monospace;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    color: white;
+    margin-bottom: 40px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+header p {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+main {
+    display: grid;
+    gap: 30px;
+}
+
+/* Relógio Principal */
+.relogio-principal {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.9));
+    border-radius: 25px;
+    padding: 50px;
+    text-align: center;
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.localizacao {
+    font-size: 1.3em;
+    color: #2a5298;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hora-grande {
+    font-size: 5em;
+    font-weight: bold;
+    color: #1e3c72;
+    letter-spacing: 3px;
+    margin: 20px 0;
+    font-family: 'Courier New', monospace;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.data {
+    font-size: 1.4em;
+    color: #555;
+    margin: 15px 0;
+}
+
+.info-fuso {
+    font-size: 1.1em;
+    color: #999;
+    font-style: italic;
+}
+
+/* Controles */
+.controles {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.grupo-controle {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.grupo-controle label {
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.grupo-controle select,
+.grupo-controle button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.grupo-controle select {
+    background: white;
+    color: #333;
+    min-width: 200px;
+}
+
+.grupo-controle select:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.grupo-controle button {
+    background: #ff6b6b;
+    color: white;
+    padding: 10px 25px;
+    min-width: 120px;
+}
+
+.grupo-controle button:hover {
+    background: #ff5252;
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 107, 107, 0.4);
+}
+
+/* Grid de Relógios */
+.grid-relogios {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.card-relogio {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-relogio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card-relogio::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #ff6b6b, #ffa726, #66bb6a, #29b6f6, #ab47bc);
+}
+
+.nome-cidade {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #1e3c72;
+    margin-bottom: 10px;
+}
+
+.fuso-info {
+    font-size: 0.9em;
+    color: #999;
+    margin-bottom: 15px;
+}
+
+.hora-card {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #2a5298;
+    letter-spacing: 2px;
+    margin: 15px 0;
+    font-family: 'Courier New', monospace;
+}
+
+.periodo {
+    font-size: 0.95em;
+    color: #ff6b6b;
+    font-weight: bold;
+    height: 20px;
+}
+
+.data-card {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #eee;
+}
+
+.botao-remover {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.botao-remover:hover {
+    background: #ff5252;
+    transform: scale(1.1);
+}
+
+.mensagem-vazia {
+    grid-column: 1 / -1;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.7);
+    padding: 40px;
+    font-size: 1.2em;
+}
+
+/* Animação do relógio principal */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.7;
+    }
+}
+
+.hora-grande {
+    animation: pulse 1s infinite;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .hora-grande {
+        font-size: 3em;
+    }
+
+    .relogio-principal {
+        padding: 30px;
+    }
+
+    .controles {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .grupo-controle {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .grupo-controle select,
+    .grupo-controle button {
+        width: 100%;
+    }
+
+    .grid-relogios {
+        grid-template-columns: 1fr;
+    }
+}

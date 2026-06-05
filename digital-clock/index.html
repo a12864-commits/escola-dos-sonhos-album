@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relógio Digital - Múltiplos Fusos Horários</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-clock"></i> Relógio Digital</h1>
+            <p>Múltiplos Fusos Horários</p>
+        </header>
+
+        <main>
+            <!-- Relógio Principal -->
+            <section class="relogio-principal">
+                <div class="localizacao" id="localizacao">Detectando localização...</div>
+                <div class="hora-grande" id="horaPrincipal">00:00:00</div>
+                <div class="data" id="dataPrincipal">-- de -- de ----</div>
+                <div class="info-fuso" id="infoFuso">UTC</div>
+            </section>
+
+            <!-- Controles -->
+            <section class="controles">
+                <div class="grupo-controle">
+                    <label for="tipoFormato">Formato:</label>
+                    <select id="tipoFormato" onchange="atualizarFormato()">
+                        <option value="24">24 Horas</option>
+                        <option value="12">12 Horas (AM/PM)</option>
+                    </select>
+                </div>
+
+                <div class="grupo-controle">
+                    <label for="novoFuso">Adicionar Fuso:</label>
+                    <select id="novoFuso">
+                        <option value="">-- Selecione --</option>
+                        <option value="UTC">UTC (Tempo Universal)</option>
+                        <option value="America/New_York">New York (EST/EDT)</option>
+                        <option value="America/Los_Angeles">Los Angeles (PST/PDT)</option>
+                        <option value="America/Chicago">Chicago (CST/CDT)</option>
+                        <option value="America/Denver">Denver (MST/MDT)</option>
+                        <option value="Europe/London">Londres (GMT/BST)</option>
+                        <option value="Europe/Paris">Paris (CET/CEST)</option>
+                        <option value="Europe/Berlin">Berlim (CET/CEST)</option>
+                        <option value="Europe/Madrid">Madri (CET/CEST)</option>
+                        <option value="Europe/Amsterdam">Amsterdã (CET/CEST)</option>
+                        <option value="Africa/Cairo">Cairo (EET/EEST)</option>
+                        <option value="Africa/Lagos">Lagos (WAT)</option>
+                        <option value="Africa/Johannesburg">Johannesburgo (SAST)</option>
+                        <option value="Asia/Dubai">Dubai (GST)</option>
+                        <option value="Asia/Bangkok">Bangkok (ICT)</option>
+                        <option value="Asia/Hong_Kong">Hong Kong (HKT)</option>
+                        <option value="Asia/Shanghai">Xangai (CST)</option>
+                        <option value="Asia/Tokyo">Tóquio (JST)</option>
+                        <option value="Asia/Seoul">Seul (KST)</option>
+                        <option value="Asia/Singapore">Singapura (SGT)</option>
+                        <option value="Asia/Kolkata">Índia (IST)</option>
+                        <option value="Australia/Sydney">Sydney (AEST/AEDT)</option>
+                        <option value="Australia/Melbourne">Melbourne (AEST/AEDT)</option>
+                        <option value="Australia/Brisbane">Brisbane (AEST)</option>
+                        <option value="Pacific/Auckland">Auckland (NZST/NZDT)</option>
+                        <option value="America/Sao_Paulo">São Paulo (BRT/BRST)</option>
+                        <option value="America/Mexico_City">Cidade do México (CST/CDT)</option>
+                        <option value="America/Toronto">Toronto (EST/EDT)</option>
+                        <option value="America/Vancouver">Vancouver (PST/PDT)</option>
+                    </select>
+                    <button onclick="adicionarFuso()"><i class="fas fa-plus"></i> Adicionar</button>
+                </div>
+            </section>
+
+            <!-- Grid de Relógios -->
+            <section class="grid-relogios" id="gridRelogios">
+                <!-- Relógios adicionados dinamicamente -->
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
